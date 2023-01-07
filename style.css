@@ -21,20 +21,6 @@ html {
   --text-dribble: #f5f8fa;
 }
 
-header {
-  display: block;
-  text-align: center;
-  margin: 7.5rem 0;
-  margin-bottom: -15rem;
-}
-
-h1 {
-  font-size: 3.75rem;
-}
-
-h1, span {
-  color: var(--text-link);
-}
 
 span {
   font-weight: 400;
