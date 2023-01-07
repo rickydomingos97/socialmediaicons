@@ -7,11 +7,26 @@
   font-family: 'Inter', sans-serif;
 }
 
+html {
+  --bg-color: #fff;
+  --text-color: #00082F;
+  --text-link: #475569;
+  --text-hover: #e2e8f0;
+  --bg-dribble: #ec4899;
+  --bg-youtube: #ff0000;
+  --bg-linkedin: #0077b5;
+  --bg-twitter: #1DA1F2;
+  --primary-color: #4263EB;
+  --primary-color-dark: #364FC7;
+  --text-dribble: #f5f8fa;
+}
 .socialMedia {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+
+  transition: 0.5s
 }
 
 .sci {
@@ -24,6 +39,7 @@
 }
 
 .sci li::before {
+  color: var(--text-color);
   content: attr(data-text);
   position: absolute;
   top: 50%;
@@ -39,7 +55,7 @@
 .sci li:hover::before {
 
 opacity: 0.5;
-transform: translate(-50%,calc(-50% + 200px));
+transform: translate(-50%,calc(-50% + 240px));
 
 }
 
@@ -48,11 +64,11 @@ transform: translate(-50%,calc(-50% + 200px));
   display: inline-block;
   width: 7.5rem;
   height: 7.5rem;
-  background: #fff;
+  background: var(--bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #475569;
+  color: var(--text-link);
   border-radius: 10px;
   text-decoration: none;
   margin: 20px;
@@ -71,14 +87,14 @@ transform: translate(-50%,calc(-50% + 200px));
 }
 
 .sci li a:hover.linkedin {
-  color: #e2e8f0;
-  background: #0077b5;
+  color: var(--text-hover);
+  background: var(--bg-linkedin);
   
 }
 
 .sci li a:hover.youtube {
-  color: #e2e8f0;
-  background: #ff0000;
+  color: var(--text-hover);
+  background: var(--bg-youtube);
 }
 
 .sci li a:hover.instagram {
@@ -87,22 +103,22 @@ transform: translate(-50%,calc(-50% + 200px));
   background: -ms-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -ms-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
   background: -o-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -o-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
   background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);;
-  color: #e2e8f0
+  color: var(--text-hover);
 }
 
 .sci li a:hover.twitter {
-  background: #1DA1F2;
-  color: #F5F8FA;
+  background: var(--bg-twitter);
+  color: var(--text-dribble);
 }
 
 .sci li a:hover.github {
   background: #333;
-  color: #e2e8f0;
+  color: var(--text-hover);
 }
 
 .sci li a:hover.dribble {
-  background: #ec4899;
-  color: #f5f8fa;
+  background: var(--bg-dribble);
+  color: var(--text-dribble);
 }
 
 .sci li a .fa {
@@ -112,5 +128,6 @@ transform: translate(-50%,calc(-50% + 200px));
 
 .sci li a:hover .fa {
   color: #e2e8f0;
+  transform: scale(1.75) translateZ(50px);
 
 }

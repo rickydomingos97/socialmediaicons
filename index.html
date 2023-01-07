@@ -1,38 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Media Icon Hover</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <section class="socialMedia">
-    <ul class="sci">
-      <li data-text="Linkedin">
-        <a href="#" class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-      </li>
-      <li data-text="Youtube"> 
-        <a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-      </li>
-      <li data-text="Instagram">
-        <a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-      </li>
-      <li data-text="Twitter">
-        <a href="#" class="twitter">
-          <i class="fa fa-twitter" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li data-text="Github">
-        <a href="#" class="github"><i class="fa fa-github" aria-hidden="true"></i></a>
-      </li>
-      <li data-text="Dribble">
-        <a href="#" class="dribble"><i class="fa fa-dribbble" aria-hidden="true"></i>
-        </a>
-      </li>
-    </ul>
-  </section>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media Icon Hover</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="socialMedia">
+      <ul class="sci">
+        <li data-text="Linkedin" data-color="#0077b5">
+          <a href="#" class="linkedin"
+            ><i class="fa fa-linkedin" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li data-text="Youtube" data-color="#ff0000">
+          <a href="#" class="youtube"
+            ><i class="fa fa-youtube" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li data-text="Instagram" data-color="#db2777">
+          <a href="#" class="instagram"
+            ><i class="fa fa-instagram" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li data-text="Twitter" data-color="#1DA1F2">
+          <a href="#" class="twitter">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li data-text="Github" data-color="#333">
+          <a href="#" class="github"
+            ><i class="fa fa-github" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li data-text="Dribble" data-color="#ec4899">
+          <a href="#" class="dribble"
+            ><i class="fa fa-dribbble" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <script src="vanilla-tilt.min.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".sci li a"), {
+        max: 30,
+        speed: 400,
+        glare: true,
+        "max-glare": 1,
+
+      });
+
+      let list = document.querySelectorAll(".sci li");
+      let bg = document.querySelector(".socialMedia");
+
+      list.forEach((elements) => {
+        elements.addEventListener("mouseenter", function (event) {
+          let color = event.target.getAttribute("data-color");
+          bg.style.backgroundColor = color;
+        });
+
+        elements.addEventListener("mouseleave", function (event) {
+          bg.style.backgroundColor = "#fff";
+        });
+      });
+    </script>
+  </body>
 </html>
