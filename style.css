@@ -1,32 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 html {
   --bg-color: #fff;
-  --text-color: #00082F;
+  --text-color: #00082f;
   --text-link: #475569;
   --text-hover: #e2e8f0;
   --bg-dribble: #ec4899;
   --bg-youtube: #ff0000;
   --bg-linkedin: #0077b5;
-  --bg-twitter: #1DA1F2;
-  --primary-color: #4263EB;
-  --primary-color-dark: #364FC7;
+  --bg-twitter: #1da1f2;
+  --primary-color: #4263eb;
+  --primary-color-dark: #364fc7;
   --text-dribble: #f5f8fa;
 }
+
+header {
+  display: block;
+  text-align: center;
+  margin: 7.5rem 0;
+  margin-bottom: -15rem;
+}
+
+h1 {
+  font-size: 3.75rem;
+}
+
+h1, span {
+  color: var(--text-link);
+}
+
+span {
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
 .socialMedia {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 
-  transition: 0.5s
+  transition: 0.5s;
 }
 
 .sci {
@@ -44,7 +65,7 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,calc(-50% + 180px));
+  transform: translate(-50%, calc(-50% + 180px));
   font-size: 14vw;
   pointer-events: none;
   font-weight: 800;
@@ -53,10 +74,8 @@ html {
 }
 
 .sci li:hover::before {
-
-opacity: 0.5;
-transform: translate(-50%,calc(-50% + 240px));
-
+  opacity: 0.5;
+  transform: translate(-50%, calc(-50% + 240px));
 }
 
 .sci li a {
@@ -76,20 +95,18 @@ transform: translate(-50%,calc(-50% + 240px));
 
   transform-style: preserve-3d;
   perspective: 500px;
-  box-shadow: 0 25px 35px rgba(0,0,0,0.1);
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
 
   transition: 0.25s;
 }
 
 .sci li a:hover {
   background: #cbd5e1;
-
 }
 
 .sci li a:hover.linkedin {
   color: var(--text-hover);
   background: var(--bg-linkedin);
-  
 }
 
 .sci li a:hover.youtube {
@@ -98,11 +115,55 @@ transform: translate(-50%,calc(-50% + 240px));
 }
 
 .sci li a:hover.instagram {
-  background: -webkit-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
-  background: -moz-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -moz-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
-  background: -ms-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -ms-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
-  background: -o-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -o-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
-  background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);;
+  background: -webkit-radial-gradient(
+      32% 106%,
+      circle cover,
+      rgb(255, 225, 125) 0%,
+      rgb(255, 205, 105) 10%,
+      rgb(250, 145, 55) 28%,
+      rgb(235, 65, 65) 42%,
+      transparent 82%
+    ),
+    -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+  background: -moz-radial-gradient(
+      32% 106%,
+      circle cover,
+      rgb(255, 225, 125) 0%,
+      rgb(255, 205, 105) 10%,
+      rgb(250, 145, 55) 28%,
+      rgb(235, 65, 65) 42%,
+      transparent 82%
+    ),
+    -moz-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+  background: -ms-radial-gradient(
+      32% 106%,
+      circle cover,
+      rgb(255, 225, 125) 0%,
+      rgb(255, 205, 105) 10%,
+      rgb(250, 145, 55) 28%,
+      rgb(235, 65, 65) 42%,
+      transparent 82%
+    ),
+    -ms-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+  background: -o-radial-gradient(
+      32% 106%,
+      circle cover,
+      rgb(255, 225, 125) 0%,
+      rgb(255, 205, 105) 10%,
+      rgb(250, 145, 55) 28%,
+      rgb(235, 65, 65) 42%,
+      transparent 82%
+    ),
+    -o-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+  background: radial-gradient(
+      circle farthest-corner at 32% 106%,
+      rgb(255, 225, 125) 0%,
+      rgb(255, 205, 105) 10%,
+      rgb(250, 145, 55) 28%,
+      rgb(235, 65, 65) 42%,
+      transparent 82%
+    ),
+    linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
   color: var(--text-hover);
 }
 
@@ -129,5 +190,4 @@ transform: translate(-50%,calc(-50% + 240px));
 .sci li a:hover .fa {
   color: #e2e8f0;
   transform: scale(1.75) translateZ(50px);
-
 }
